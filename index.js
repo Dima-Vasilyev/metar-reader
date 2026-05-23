@@ -5,6 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/lib', express.static(path.join(__dirname, 'lib')));
 
 app.get('/api/metar/:id', async (req, res) => {
   const id = req.params.id.toUpperCase();

@@ -4,7 +4,8 @@
   "description": "Web app for reading and decoding METAR weather reports",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "jest"
   },
   "dependencies": {
     "express": "^4.19.2"
@@ -12,5 +13,8 @@
   "engines": {
     "node": ">=18"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
 }
