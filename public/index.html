@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>METAR Reader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>METAR Reader</h1>
+      <p class="subtitle">Plain-English weather for any airport worldwide</p>
+    </header>
+
+    <div class="search-box">
+      <div class="input-wrapper">
+        <input
+          type="text"
+          id="airportInput"
+          placeholder="Search airport or code"
+          maxlength="40"
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <div id="autocomplete" class="autocomplete-dropdown hidden"></div>
+      </div>
+      <button id="searchBtn">Get Weather</button>
+    </div>
+
+    <div id="error" class="hidden"></div>
+    <div id="result" class="hidden"></div>
+  </div>
+
+  <footer class="site-footer">
+    <strong>METAR</strong> (Meteorological Aerodrome Report) is a standardized format for reporting current weather at airports, issued every hour by certified ground stations worldwide.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
