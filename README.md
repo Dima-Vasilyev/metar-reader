@@ -142,6 +142,31 @@ You can also search by **IATA code** (the 3-letter codes used on boarding passes
 
 ---
 
+## Testing
+
+The METAR parser is covered by a Jest test suite using mock METAR strings.
+
+```bash
+npm test
+```
+
+Tests live in `test/metar-parser.test.js` and cover 48 cases across 8 groups:
+
+| Group | What's tested |
+|---|---|
+| Full METAR | All fields parsed correctly from a real-world string |
+| Report type prefix | `METAR` and `SPECI` prefixes are stripped before parsing |
+| Wind | Calm, variable (VRB), gusts, variable sector, MPS→knots conversion |
+| Visibility | Statute miles, fractions, less-than values, metric (9999 / meters) |
+| Weather phenomena | Rain, snow, fog, thunderstorms, intensity prefixes (`-` / `+`) |
+| Sky conditions | CLR, multiple layers, CB/TCU flags, CAVOK |
+| Temperature | Positive and negative (`M` prefix) temp and dewpoint |
+| Altimeter | Inches of mercury (`A`) and QNH hectopascals (`Q`) |
+
+The parser logic lives in `lib/metar-parser.js`, shared between the browser and the test runner.
+
+---
+
 ## Tech Stack
 
 - **Runtime** — Node.js 18+
