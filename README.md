@@ -4,6 +4,8 @@ A web application that translates live airport weather reports into plain, every
 
 ![Node](https://img.shields.io/badge/Node.js-18%2B-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue)
 
+**Live demo:** https://metar-reader-production.up.railway.app
+
 ![METAR Reader screenshot](assets/screenshot.png)
 
 ---
