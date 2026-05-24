@@ -61,6 +61,10 @@ Tests live in `test/` alongside the module they cover and use Jest. Run with `np
 - Do **not** mock the METAR parser in tests — test against real METAR strings.
 - Avoid testing `public/app.js` DOM logic; keep rendering logic thin so the parser stays testable.
 
+## Working style
+
+- Pause and check in with the user at key decision points during complex tasks
+
 ## Common gotchas
 
 - The parser receives the **raw METAR string** as a single line; strip trailing whitespace before passing it.
